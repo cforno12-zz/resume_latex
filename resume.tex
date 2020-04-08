@@ -1,0 +1,201 @@
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\def \ifempty#1{\def\temp{#1} \ifx\temp\empty }
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+  	\ifempty{#1}#2\else\textbf{#1}{: #2 \vspace{-2pt}}\fi
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingtwo}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Cristobal Forno} & Email : \href{mailto:cforno12@outlook.com}{cforno12@outlook.com}\\
+  \href{https://cforno12.github.io}{https://cforno12.github.io} & Mobile : +1 (631) 742-3287 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Binghamton University, Thomas J. Watson School of Engineering}{Binghamton, NY}
+      {Bachelor's of Science in Computer Science; Overall GPA: 3.3/4.0}{August 2016 - May 2019}
+  \resumeSubHeadingListEnd
+
+  %----------------SKILLS-----------------
+  \section{Skills}
+  \resumeSubHeadingListStart
+  \setlength\itemsep{0em}
+   \item{
+     \textbf{Programming Languages}{: C, Ruby, Python, Javascript (Electron, Node)}
+   }
+   \item{
+     \textbf{Technologies}{: Docker, Jenkins, Quay.io, RabbitMQ, SideKiq, Kubernetes, \LaTeX , HTML/CSS }
+   }
+   \item{
+     \textbf{Frameworks}{: Ruby on Rails}
+   }
+   \item{
+     \textbf{Tools}{: Emacs, Git, Rspec, FactoryBot, Heroku, JIRA}
+   }
+   \item{
+     \textbf{Languages}{: Spanish(native)}
+   }
+ \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading
+    {IBM}{Austin, TX}
+    {Software Developer}{June 2019 - Present}
+    \resumeItemListStart
+    \resumeItem{}
+               {Worked on and maintained IBM Virtual Ethernet driver for users of the Linux powerpc architecture}
+    \resumeItem{}
+               {Contributed patches to upstream Linux through the Linux Kernel Mailing System}
+    \resumeItem{}
+               {Worked with IBM's partner distributions to integrate and/or backport code changes into their releases}
+    \resumeItemListEnd
+\resumeSubHeadingEnd
+    \resumeSubheading
+      {WeWork}{Manhattan, NY}
+      {Software Engineering Intern}{June 2018 - August 2018}
+      \resumeItemListStart
+      	\resumeItem{}
+                   {Worked on a distributed system handling different products for WeWork$'$ s membership experience using Ruby on Rails}
+        \resumeItem{}
+                   {Learned how to develop in a SCRUM/Agile environment on the job}
+        \resumeItem{}
+                   {Tested various microservices using Rspec and FactoryBot to ensure code quality/completeness}
+        \resumeItem{}
+                   {Paired with other software engineering teams in the company to complete tickets more efficiently}
+        \resumeItem{}
+                   {Debugged a Membership API directly overlooked by the team}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+\resumeSubHeadingListStart
+     \resumeSubheadingtwo
+         {Yodabot}{November 2019}
+         {}{}
+      \resumeItemListStart
+        \resumeItem{}
+          {Created a Slack Bot to help IBM Cloud Developers to retrieve information from different services}
+        \resumeItem{}
+          {Utilized Node.js with the help of Botkit library}
+      \resumeItemListEnd          
+    \resumeSubheadingtwo
+        {Key-Value Store with Configurable Consistency}{December 2018}
+        {}{}
+      \resumeItemListStart
+        \resumeItem{}
+          {Implemented a distributed key-value store system that borrows designs from Dynamo And Cassandra using Python}
+        \resumeItem{}
+          {Used Google Protobuf for communication among different entities in the system}
+          \resumeItemListEnd
+
+      \resumeSubheadingtwo
+          {N-Queens Algorithmn}{April 2018}
+          {}{}
+      \resumeItemListStart
+        \resumeItem{}
+          {Implemented the N-Queens Algorithmn in C++ using backtracking algorithm}
+        \resumeItem{}
+          {Presented and demoed in front of a class}
+          \resumeItemListEnd
+
+     \resumeSubheadingtwo
+         {Covfefe Checker}{June 2017}
+         {}{}
+      \resumeItemListStart
+        \resumeItem{}
+          {Created a program to check misspelled tweets of any public user}
+        \resumeItem{}
+          {Utilized Python with the help of Python libraries: Tweepy and PyEnchant}
+          \resumeItemListEnd
+          \resumeSubHeadingListEnd
+
+\section{Leadership Experience}
+\resumeSubHeadingListStart       
+\resumeSubheading
+    {HackBU}{Binghamton, NY}
+    {Co-director}{Aug. 2016 - June 2019}
+    \resumeItemListStart
+    \resumeItem{}
+               {Lead workshops and presented on topics like Git/Github and emacs}
+   \resumeItem{}
+              {Organized annual hackathon with 350+ attendees with other co-directors}
+   \resumeItemListEnd
+\resumeSubHeadingListEnd
+\end{document}
